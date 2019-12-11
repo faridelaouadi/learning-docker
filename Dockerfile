@@ -1,6 +1,5 @@
-#First ever dockerfile!
-
-#step 1 - get the base image
-
 FROM python:3
-RUN pip install Flask 
+WORKDIR /usr/src/app
+ADD requirements.txt /usr/src/app
+RUN pip install -r requirements.txt
+ADD . /usr/src/app
